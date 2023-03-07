@@ -107,10 +107,29 @@
     .menu__lista {
         height: auto;
         padding: 20px 17px 20px 15px;
+        gap: 15px;
     }
 
     .menu__itens {
         flex-direction: row; /* flex-direction para mudar o eixo de X para Y e ou de Y para X */
         gap: 15px;
+        align-items: center; /* alingn-items para alinhamento de itens fora do eixo principal */
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+    .jogos {
+        order: 3;
+    }
+    .filmes {
+        order: 2;
+    }
+    .premium {
+        order: 1;
+    }
+    .maispagina {
+        order: 4;
+        align-items: ;
     }
 }
