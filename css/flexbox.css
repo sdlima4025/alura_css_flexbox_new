@@ -24,10 +24,13 @@
 .superior__secao__container {
     display: flex;
     align-items: center;
-    white-space: nowrap; /* para alinhamento de textos */
-    overflow: scroll;   /* Barra de rolagem */
+    white-space: nowrap;
+    /* para alinhamento de textos */
+    overflow: scroll;
+    /* Barra de rolagem */
     gap: 15px;
 }
+
 /* Menu lateral */
 .menu__container {
     position: fixed;
@@ -41,9 +44,18 @@
     justify-content: space-around;
     height: 100%;
 }
+
 .menu__lista li {
-    align-self: center;  /* propiedade para alinhar itens */
+    align-self: center;
+    /* propiedade para alinhar itens */
 }
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .menu__lista:nth-child(2),
 .menu__lista:nth-child(3),
 .menu__lista:nth-child(4) {
@@ -54,14 +66,51 @@
 @media (min-width: 834px) {
     /* CABEÇAHO */
 
-    .cabecalho__pesquisar__item{
+    .cabecalho__pesquisar__item {
         display: block;
     }
 
-    /* FOOTER */
+    /* FOOTER  eixo X */
 
     .rodape__container {
         justify-content: space-between;
     }
+
+    /* FOOTER  eixo Y */
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
 }
 
+@media(min-width: 1440px) {
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+    }
+
+    .menu__itens {
+        flex-direction: row; /* flex-direction para mudar o eixo de X para Y e ou de Y para X */
+        gap: 15px;
+    }
+}
