@@ -31,6 +31,21 @@
     gap: 15px;
 }
 
+/* Video */
+
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.videos__item {
+    flex-grow: 1;
+    width: 303px;
+    height: 280px;
+
+}
+
 /* Menu lateral */
 .menu__container {
     position: fixed;
@@ -130,6 +145,6 @@
     }
     .maispagina {
         order: 4;
-        align-items: ;
+        
     }
 }
